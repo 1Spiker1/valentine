@@ -52,14 +52,25 @@
         let yesButton = document.getElementById("yesButton");
         let noButton = document.getElementById("noButton");
         let size = 20;
+        let noClickCount = 0;
 
         noButton.addEventListener("click", function() {
             size += 5;
             yesButton.style.fontSize = size + "px";
+            noClickCount++;
+
+            if (noClickCount > 10) {
+                noButton.innerText = "Yes";
+                noButton.classList.remove("no");
+                noButton.classList.add("yes");
+                noButton.onclick = function() {
+                    alert("Yay!!!❤️❤️❤️😊❤️😊😊❤️😊❤️😊❤️😊❤️❤️😊❤️😊😘");
+                };
+            }
         });
 
         yesButton.addEventListener("click", function() {
-            alert("Yay! ❤️");
+            alert("Yay!!!❤️❤️❤️😊❤️😊😊❤️😊❤️😊❤️😊❤️❤️😊❤️😊😘");
         });
     </script>
 </body>
