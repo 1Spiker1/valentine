@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffccd5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            color: #d6336c;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no {
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wanna be my Valentine?</h1>
+    <div class="buttons">
+        <button class="yes" id="yesButton" style="font-size: 20px;">Yes</button>
+        <button class="no" id="noButton">No</button>
+    </div>
+
+    <script>
+        let yesButton = document.getElementById("yesButton");
+        let noButton = document.getElementById("noButton");
+        let size = 20;
+
+        noButton.addEventListener("click", function() {
+            size += 5;
+            yesButton.style.fontSize = size + "px";
+        });
+
+        yesButton.addEventListener("click", function() {
+            alert("Yay! ❤️");
+        });
+    </script>
+</body>
+</html>
